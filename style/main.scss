@@ -5,27 +5,38 @@ $field-width: 500px;
 $grid-spacing: 15px;
 $grid-row-cells: 4;
 $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
-$tile-border-radius: 3px;
+$tile-border-radius: 5px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: #776E65;
-$bright-text-color: #f9f6f2;
+$text-color: #2f5a3f;
+$bright-text-color: #f6f7ef;
+$page-background: #f4f2ea;
+$title-color: #2f8f52;
 
-$tile-color: #eee4da;
-$tile-gold-color: #edc22e;
+$tile-color: #e4f0d6;
+$tile-gold-color: #2e9a58;
 $tile-gold-glow-color: lighten($tile-gold-color, 15%);
 
 $game-container-margin-top: 40px;
-$game-container-background: #bbada0;
+$game-container-background: #8cbf8a;
+
+$leaf-color: #3fa463;
+$monstera-leaf: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cmask id='m'%3E%3Crect width='200' height='200' fill='white'/%3E%3Cg stroke='black' stroke-linecap='round' fill='none'%3E%3Cpath stroke-width='3' d='M100 40V182'/%3E%3Cpath stroke-width='7' d='M74 62L-10 40M70 95L-10 92M74 128L-5 150M126 62L210 40M130 95L210 92M126 128L205 150'/%3E%3C/g%3E%3Cg fill='black'%3E%3Ccircle cx='84' cy='78' r='4'/%3E%3Ccircle cx='116' cy='78' r='4'/%3E%3Ccircle cx='84' cy='112' r='4'/%3E%3Ccircle cx='116' cy='112' r='4'/%3E%3C/g%3E%3C/mask%3E%3Cpath fill='%233fa463' mask='url(%23m)' d='M100 192C42 172 6 124 14 74C22 28 66 8 100 34C134 8 178 28 186 74C194 124 158 172 100 192Z'/%3E%3Cpath fill='none' stroke='%232e8a4e' stroke-width='5' stroke-linecap='round' d='M100 36C100 22 96 10 88 2'/%3E%3C/svg%3E");
+$pothos-vine: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 300'%3E%3Cpath fill='none' stroke='%232e8a4e' stroke-width='3' stroke-linecap='round' d='M62 0C40 50 84 100 58 150C40 190 70 220 60 258'/%3E%3Cg transform='translate(54 28) rotate(62) scale(0.8)'%3E%3Cpath fill='%236cc47e' d='M0 6C-6 -4 -24 0 -22 16C-20 32 -6 42 0 52C6 42 20 32 22 16C24 0 6 -4 0 6Z'/%3E%3Cpath stroke='%232e8a4e' stroke-width='1.5' opacity='.5' d='M0 9V46'/%3E%3C/g%3E%3Cg transform='translate(68 68) rotate(-58) scale(0.9)'%3E%3Cpath fill='%233fa463' d='M0 6C-6 -4 -24 0 -22 16C-20 32 -6 42 0 52C6 42 20 32 22 16C24 0 6 -4 0 6Z'/%3E%3Cpath stroke='%232e8a4e' stroke-width='1.5' opacity='.5' d='M0 9V46'/%3E%3C/g%3E%3Cg transform='translate(62 112) rotate(56) scale(1)'%3E%3Cpath fill='%233fa463' d='M0 6C-6 -4 -24 0 -22 16C-20 32 -6 42 0 52C6 42 20 32 22 16C24 0 6 -4 0 6Z'/%3E%3Cpath stroke='%232e8a4e' stroke-width='1.5' opacity='.5' d='M0 9V46'/%3E%3C/g%3E%3Cg transform='translate(50 158) rotate(-52) scale(0.95)'%3E%3Cpath fill='%236cc47e' d='M0 6C-6 -4 -24 0 -22 16C-20 32 -6 42 0 52C6 42 20 32 22 16C24 0 6 -4 0 6Z'/%3E%3Cpath stroke='%232e8a4e' stroke-width='1.5' opacity='.5' d='M0 9V46'/%3E%3C/g%3E%3Cg transform='translate(58 204) rotate(50) scale(0.9)'%3E%3Cpath fill='%233fa463' d='M0 6C-6 -4 -24 0 -22 16C-20 32 -6 42 0 52C6 42 20 32 22 16C24 0 6 -4 0 6Z'/%3E%3Cpath stroke='%232e8a4e' stroke-width='1.5' opacity='.5' d='M0 9V46'/%3E%3C/g%3E%3Cg transform='translate(62 246) rotate(-8) scale(0.8)'%3E%3Cpath fill='%236cc47e' d='M0 6C-6 -4 -24 0 -22 16C-20 32 -6 42 0 52C6 42 20 32 22 16C24 0 6 -4 0 6Z'/%3E%3Cpath stroke='%232e8a4e' stroke-width='1.5' opacity='.5' d='M0 9V46'/%3E%3C/g%3E%3C/svg%3E");
+$fern-sprig: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cpath fill='none' stroke='%232e8a4e' stroke-width='2.5' stroke-linecap='round' d='M12 152Q52 72 146 18'/%3E%3Cellipse cx='20.5' cy='136.3' rx='17.5' ry='4.2' fill='%236cc47e' transform='rotate(-121.6 20.5 136.3) translate(17.5 0)'/%3E%3Cellipse cx='20.5' cy='136.3' rx='17.5' ry='4.2' fill='%236cc47e' transform='rotate(2.4 20.5 136.3) translate(17.5 0)'/%3E%3Cellipse cx='28.1' cy='124.0' rx='16.3' ry='4.2' fill='%233fa463' transform='rotate(-118.6 28.1 124.0) translate(16.3 0)'/%3E%3Cellipse cx='28.1' cy='124.0' rx='16.3' ry='4.2' fill='%233fa463' transform='rotate(5.4 28.1 124.0) translate(16.3 0)'/%3E%3Cellipse cx='36.5' cy='112.2' rx='15.1' ry='4.2' fill='%236cc47e' transform='rotate(-115.6 36.5 112.2) translate(15.1 0)'/%3E%3Cellipse cx='36.5' cy='112.2' rx='15.1' ry='4.2' fill='%236cc47e' transform='rotate(8.4 36.5 112.2) translate(15.1 0)'/%3E%3Cellipse cx='45.4' cy='100.6' rx='13.9' ry='4.2' fill='%233fa463' transform='rotate(-112.6 45.4 100.6) translate(13.9 0)'/%3E%3Cellipse cx='45.4' cy='100.6' rx='13.9' ry='4.2' fill='%233fa463' transform='rotate(11.4 45.4 100.6) translate(13.9 0)'/%3E%3Cellipse cx='55.1' cy='89.4' rx='12.7' ry='4.2' fill='%236cc47e' transform='rotate(-109.8 55.1 89.4) translate(12.7 0)'/%3E%3Cellipse cx='55.1' cy='89.4' rx='12.7' ry='4.2' fill='%236cc47e' transform='rotate(14.2 55.1 89.4) translate(12.7 0)'/%3E%3Cellipse cx='65.5' cy='78.5' rx='11.5' ry='4.2' fill='%233fa463' transform='rotate(-107.0 65.5 78.5) translate(11.5 0)'/%3E%3Cellipse cx='65.5' cy='78.5' rx='11.5' ry='4.2' fill='%233fa463' transform='rotate(17.0 65.5 78.5) translate(11.5 0)'/%3E%3Cellipse cx='76.6' cy='67.9' rx='10.3' ry='4.2' fill='%236cc47e' transform='rotate(-104.3 76.6 67.9) translate(10.3 0)'/%3E%3Cellipse cx='76.6' cy='67.9' rx='10.3' ry='4.2' fill='%236cc47e' transform='rotate(19.7 76.6 67.9) translate(10.3 0)'/%3E%3Cellipse cx='88.3' cy='57.7' rx='9.1' ry='4.2' fill='%233fa463' transform='rotate(-101.7 88.3 57.7) translate(9.1 0)'/%3E%3Cellipse cx='88.3' cy='57.7' rx='9.1' ry='4.2' fill='%233fa463' transform='rotate(22.3 88.3 57.7) translate(9.1 0)'/%3E%3Cellipse cx='100.8' cy='47.8' rx='7.9' ry='4.2' fill='%236cc47e' transform='rotate(-99.2 100.8 47.8) translate(7.9 0)'/%3E%3Cellipse cx='100.8' cy='47.8' rx='7.9' ry='4.2' fill='%236cc47e' transform='rotate(24.8 100.8 47.8) translate(7.9 0)'/%3E%3Cellipse cx='113.9' cy='38.3' rx='6.7' ry='4.2' fill='%233fa463' transform='rotate(-96.8 113.9 38.3) translate(6.7 0)'/%3E%3Cellipse cx='113.9' cy='38.3' rx='6.7' ry='4.2' fill='%233fa463' transform='rotate(27.2 113.9 38.3) translate(6.7 0)'/%3E%3Cellipse cx='127.7' cy='29.1' rx='5.5' ry='4.2' fill='%236cc47e' transform='rotate(-94.6 127.7 29.1) translate(5.5 0)'/%3E%3Cellipse cx='127.7' cy='29.1' rx='5.5' ry='4.2' fill='%236cc47e' transform='rotate(29.4 127.7 29.1) translate(5.5 0)'/%3E%3C/svg%3E");
 
 $transition-speed: 100ms;
+
+html {
+  overflow-x: hidden;
+}
 
 html, body {
   margin: 0;
   padding: 0;
 
-  background: #faf8ef;
+  background: $page-background;
   color: $text-color;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
@@ -33,6 +44,82 @@ html, body {
 
 body {
   margin: 80px 0;
+}
+
+// Decorative monstera leaves peeking in from the page corners
+body:before, body:after {
+  content: "";
+  position: fixed;
+  width: 340px;
+  height: 340px;
+  background: $monstera-leaf no-repeat center / contain;
+  opacity: .16;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body:before {
+  top: -90px;
+  left: -90px;
+  @include transform(rotate(-45deg));
+}
+
+body:after {
+  bottom: -90px;
+  right: -90px;
+  @include transform(rotate(135deg));
+}
+
+html:before, html:after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+}
+
+html:before {
+  top: -30px;
+  right: 60px;
+  width: 120px;
+  height: 300px;
+  background: $pothos-vine no-repeat center / contain;
+  opacity: .22;
+}
+
+html:after {
+  bottom: -20px;
+  left: 40px;
+  width: 240px;
+  height: 240px;
+  background: $fern-sprig no-repeat center / contain;
+  opacity: .2;
+}
+
+// Foreground plants tucked over the corners of the board
+.game-container:before, .game-container:after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  opacity: .95;
+}
+
+.game-container:before {
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background: $monstera-leaf no-repeat center / contain;
+  @include transform(rotate(40deg));
+}
+
+.game-container:after {
+  bottom: -30px;
+  left: -72px;
+  width: 150px;
+  height: 150px;
+  background: $fern-sprig no-repeat center / contain;
+  @include transform(rotate(-45deg));
 }
 
 .heading {
@@ -45,6 +132,7 @@ h1.title {
   margin: 0;
   display: block;
   float: left;
+  color: $title-color;
 }
 
 @include keyframes(move-up) {
@@ -75,7 +163,7 @@ h1.title {
   height: $height;
   line-height: $height + 22px;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: 6px;
   color: white;
   margin-top: 8px;
   text-align: center;
@@ -141,6 +229,8 @@ hr {
 }
 
 .container {
+  position: relative;
+  z-index: 1;
   width: $field-width;
   margin: 0 auto;
 }
@@ -158,8 +248,8 @@ hr {
 // Styles for buttons
 @mixin button {
   display: inline-block;
-  background: darken($game-container-background, 20%);
-  border-radius: 3px;
+  background: darken($game-container-background, 25%);
+  border-radius: 6px;
   padding: 0 20px;
   text-decoration: none;
   color: $bright-text-color;
@@ -187,6 +277,7 @@ hr {
 
     background: $game-container-background;
     border-radius: $tile-border-radius * 2;
+    box-shadow: 0 10px 30px rgba($leaf-color, .18);
     width: $field-width;
     height: $field-width;
     -webkit-box-sizing: border-box;
@@ -338,10 +429,10 @@ hr {
   // Colors for all 11 states, false = no special color
   $special-colors: false false, // 2
                    false false, // 4
-                   #f78e48 true, // 8
-                   #fc5e2e true, // 16
-                   #ff3333 true, // 32
-                   #ff0000 true, // 64
+                   #bfe08a false, // 8
+                   #93cf6c false, // 16
+                   #5fb85f false, // 32
+                   #3c9e52 true, // 64
                    false true, // 128
                    false true, // 256
                    false true, // 512
@@ -404,7 +495,7 @@ hr {
   // Super tiles (above 2048)
   &.tile-super .tile-inner {
     color: $bright-text-color;
-    background: mix(#333, $tile-gold-color, 95%);
+    background: mix(#1a3324, $tile-gold-color, 95%);
 
     font-size: 30px;
 
@@ -478,7 +569,7 @@ hr {
   $grid-spacing: 10px;
   $grid-row-cells: 4;
   $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
-  $tile-border-radius: 3px;
+  $tile-border-radius: 5px;
   $game-container-margin-top: 17px;
 
   html, body {
@@ -493,6 +584,42 @@ hr {
   h1.title {
     font-size: 27px;
     margin-top: 15px;
+  }
+
+  body:before, body:after {
+    width: 200px;
+    height: 200px;
+    opacity: .1;
+  }
+
+  html:before {
+    right: 10px;
+    top: -20px;
+    width: 70px;
+    height: 175px;
+    opacity: .14;
+  }
+
+  html:after {
+    left: 0;
+    bottom: -10px;
+    width: 140px;
+    height: 140px;
+    opacity: .12;
+  }
+
+  .game-container:before {
+    top: -26px;
+    right: -18px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .game-container:after {
+    bottom: -14px;
+    left: -30px;
+    width: 70px;
+    height: 70px;
   }
 
   .container {
